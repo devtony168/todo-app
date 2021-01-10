@@ -9,8 +9,9 @@ while (input !== "quit") {
         const newItem = prompt("Enter you new item: ")
         list.push(newItem)
         console.log(`${newItem} added to your list.`)
-    } else if (input === "list") {
-
+    } 
+    
+    else if (input === "list") {
         if (!Array.isArray(list) || !list.length) {
             alert("Your ToDo List is empty! Add some new items.")
         } else {
@@ -21,7 +22,9 @@ while (input !== "quit") {
             console.log("**************************")
             alert("See console logs for your list. ")
         }
-    } else if (input === "delete") {
+    } 
+    
+    else if (input === "delete") {
         const index = parseInt(prompt("Which item do you want to delete? Select index of item."))
         if (!Number.isNaN(index)) {
             const removedItem = list.splice(index, 1)
@@ -29,7 +32,9 @@ while (input !== "quit") {
         } else {
             console.log("Unknown index.")
         }
-    } else {
+    } 
+    
+    else {
         alert("Invalid input. Try again.")
     }
     input = prompt("What's next? Choose 'new', 'list', 'delete' or 'quit'.")
